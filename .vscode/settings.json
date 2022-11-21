@@ -1,8 +1,8 @@
 {
 	"liveServer.settings.https": {
 	"enable": true, //set it true to enable the feature.
-	"cert": "D:/Users/janne/Documents/Artevelde/iar-colleges/server.crt", //full path of the certificate
-	"key": "D:/Users/janne/Documents/Artevelde/iar-colleges/server.key", //full path of the private key
+	"cert": "/Users/claudinedekesel/Desktop/2PGM/Interactive Augmented Reality/colleges-pgm-claudeke/server.crt", //full path of the certificate
+	"key": "/Users/claudinedekesel/Desktop/2PGM/Interactive Augmented Reality/colleges-pgm-claudeke/server.key", //full path of the private key
 	"passphrase": "1234"
 	},
 	"liveServer.settings.port": 5502

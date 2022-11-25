@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <title>IAR</title>
+    <link rel="stylesheet" href="./assets/main.css">
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+    <script src="https://hammerjs.github.io/dist/hammer.min.js"></script>
+    <script src="./assets//modelFunctions.js"></script>
+</head>
+<body>
+    <div class="instructions">
+        <p>Point your camera to the hero marker</p>
+        <!--
+        <div class="controls">
+            <div>
+                <button class="btn btn__orbit">Orbit</button>
+            </div>
+            <div class="control">
+                <label for="">Animation speed</label>
+                <input type="number">
+            </div>
+            <div class="control">
+                <label for="">Scaling orbit</label>
+                <input type="number">
+            </div>
+            <div class="control">
+                <label for="">Choose model</label>
+                <input type="number">
+            </div>
+            -->
+            <div>
+                <p>Choose a model</p>
+                <div class="models">
+                    <button class="btn btn__virus" value="virus">Virus</button>
+                    <button class="btn btn__dino" value="dino">Dinosaur</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a-scene embedded arjs>
+        <a-assets>
+            <a-asset-item id="virus" src="./assets/Virus.glb"></a-asset-item>
+            <a-asset-item id="dino" src="./assets/stegosaurs_SStenops.glb"></a-asset-item>
+        </a-assets>
+        <a-marker preset="hiro" controller>
+            <a-entity gltf-model="#virus" scale="0.3 0.3 0.3" position="0 0 0" animation-mixer="clip: CubeAction.001; timescale: 0.5;"></a-entity>
+            <!--
+            <div class="dino hide">
+                <a-entity gltf-model="#dino" scale="0.3 0.3 0.3" position="0 0 0"></a-entity>
+            </div>
+            -->
+        </a-marker>
+        <a-entity camera position="0 0 0"></a-entity>
+    </a-scene>
+
+    <script src="./assets/main.js"></script>
+</body>
+</html>

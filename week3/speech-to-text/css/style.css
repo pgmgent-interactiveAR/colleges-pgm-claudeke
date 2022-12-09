@@ -1,0 +1,76 @@
+:root {
+    --color-01: #0F1726;
+    --color-base: #ffff
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    background-color: var(--color-01);
+    color: var(--color-base);
+
+    font-family: sans-serif;
+    font-size: 1rem;
+
+    height: 100vh;
+    width: 100wh;
+
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.content {
+    width: 50%;
+}
+
+.message {
+    height: 40%;
+    width: 50%;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: solid var(--color-base) 0.18rem;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+ul {
+    margin: 0;
+}
+
+.btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.btns__btn {
+    padding: 0.8rem 1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    width: 50%;
+    border-radius: 0.5rem;
+    text-transform: uppercase;
+    border: none;
+    color: var(--color-base);
+}
+
+.btns__btn--stop {
+    background-color: rgba(242,61,127,1);
+    background: linear-gradient(45deg, rgba(242,61,127,0.1) 0%,  rgba(242,61,127,1) 100%);
+}
+
+.btns__btn--start {
+    background: rgb(15,23,38);
+    background: linear-gradient(45deg, rgba(51,222,77,0.1) 0%, rgba(51,222,77,1) 100%);
+}
+
+.hints span {
+    text-shadow: 0px 0px 6px rgba(255, 255, 255, 0.7);
+}
